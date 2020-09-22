@@ -1,0 +1,79 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" controllerName="com.sap.build.standard.poApproval.controller.Dialog3" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form">
+	<Dialog horizontalScrolling="true" icon="sap-icon://functional-location" showHeader="true" state="None" stretch="false"
+		title="Reservation Details" type="Standard" verticalScrolling="true" contentHeight="" contentWidth="42%">
+		<content>
+			<IconTabBar expandable="true" expanded="true" applyContentPadding="true" backgroundDesign="Translucent" upperCase="false" visible="true"
+				selectedKey="Ok">
+				<items>
+					<IconTabFilter iconColor="Default" text="By Plant" count="" design="Vertical" showAll="false"  textDirection="Inherit" enabled="true"
+						visible="true" iconDensityAware="false" >
+						<content>
+							<HBox>
+								<Text text="Plant" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"
+									class="sapUiTinyMargin"/>
+								<ComboBox id="mainR" placeholder="" editable="true" items="" change="plantR" enabled="true" visible="true" width="100%"
+									valueState="None" maxWidth="100%">
+								<!--	<core:Item text="{ImPlant} {Descriptions}" enabled="true" key="{ImPlant}"/>-->
+								</ComboBox>
+							</HBox>
+						</content>
+					</IconTabFilter>
+					
+				</items>
+				<content>
+					<Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"
+						visible="true"/>
+				</content>
+			</IconTabBar>
+			<Table id="technical_detailR" width="auto" noDataText="No Data" mode="SingleSelect" showSeparators="All" growing="true" growingThreshold="20"
+				growingScrollToLoad="true" class="sapUiResponsiveMargin">
+				<infoToolbar>
+					<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+						<content>
+							<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</content>
+					</Toolbar>
+				</infoToolbar>
+				<headerToolbar>
+					<OverflowToolbar width="auto" height="auto" design="Solid" visible="true" enabled="true">
+						<content>
+							<Title text="" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+							<ToolbarSpacer width=""/>
+						</content>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Reservation Number" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false" visible="false">
+						<header>
+							<Text text="Plant" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active">
+					<!--	<Text id="p1" text=""/>
+						<Text id="p2" text=""/>-->
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<beginButton/>
+		<buttons>
+				<Button text="Clear Filter" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="clearfilterR"/>
+			<Button text="Ok" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="techokR"/>
+			<Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"
+				press="cancelHelpR"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+</core:FragmentDefinition>
