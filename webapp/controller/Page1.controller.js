@@ -17,7 +17,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		return BaseController.extend("com.sap.build.ba293bd41-us_1.grGrunt.controller.Page1", {
 			handleRouteMatched: function (oEvent) {
-				
+				/*handle*/
 					var designation = window.location.origin;
 			if(designation === "https://flpnwc-ba293bd41.dispatcher.us1.hana.ondemand.com"){
 				this.getView().byId("Dashboard").setVisible(true);
